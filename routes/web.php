@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', [\App\Http\Controllers\ContactController::class, 'index']);
+
+Route::resource('contacts', \App\Http\Controllers\ContactController::class);
