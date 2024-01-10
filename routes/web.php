@@ -18,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\ContactController::class, 'index']);
 
 Route::resource('contacts', \App\Http\Controllers\ContactController::class);
+
+Route::get('/uploadfile', 'UploadfileController@index');
+Route::post('/uploadfile', 'UploadfileController@index');
+Route::get('/main', [\App\Http\Controllers\MainController::class, 'index']);
